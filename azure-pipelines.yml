@@ -30,5 +30,5 @@ steps:
   - task: Npm@1
     inputs:
       command: custom
-      customCommand: run test
+      customCommand: run test -- --coverage --watchAll=false
     displayName: Test
