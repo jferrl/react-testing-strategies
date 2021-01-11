@@ -55,6 +55,7 @@
         "collectCoverageFrom": [
             "src/**/*.{ts,tsx}",
             "!<rootDir>/node_modules/",
+            "!src/reportWebVitals.ts",
             "!src/**/*.{test.ts,test.tsx,stories.tsx}",
             "!src/**/*-object.ts",
             "!src/@types/*.ts",
