@@ -32,3 +32,9 @@ steps:
       command: custom
       customCommand: run test -- --coverage --watchAll=false
     displayName: Test
+    
+  - task: PublishCodeCoverageResults@1
+    displayName: Publish coverage
+    inputs:
+      codeCoverageTool: Cobertura
+      summaryFileLocation: coverage/cobertura-coverage.xml
