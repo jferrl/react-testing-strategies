@@ -57,11 +57,11 @@ Related Posts:
 
 ### Static testing
 
-Catch typos and type errors as you write the code.
+Catch typos and type errors as you write/transpile the code.
 
 * Use of TypeScript ([TypeScript](https://www.typescriptlang.org/))
   
-* Linter (TsLint, ESLint) (pd: tslint is going to be deprecated, but I like it a lot and I don't want to stop using it :sob:)
+* Linter (TSLint, ESLint) (pd: TSLint is going to be deprecated, but I like it a lot and I don't want to stop using it :sob:)
   
 * Configure your proyect with a good set of linting rules [Linting rules](https://github.com/jferrl/react-testing-strategies/blob/master/tslint.json)
 
