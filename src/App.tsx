@@ -1,23 +1,16 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
-// tslint:disable-next-line: match-default-export-name
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/NavBar';
+import { loadAllMarsPhotos } from './store/ducks/mars-photos/actions';
 
-function App(): React.ReactElement {
+export default function App(): React.ReactElement {
+    const dispatch = useDispatch();
+    dispatch(loadAllMarsPhotos());
+
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn React
-                </a>
-            </header>
+        <div data-testid="mars-rover-photos-app">
+            <NavBar />
         </div>
     );
 }
-
-export default App;
