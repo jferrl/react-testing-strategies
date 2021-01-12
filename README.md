@@ -1,7 +1,5 @@
 # React Testing strategies
 
-[![Build Status](https://dev.azure.com/jferrl/react-testing-strategies/_apis/build/status/jferrl.react-testing-strategies?branchName=master)](https://dev.azure.com/jferrl/react-testing-strategies/_build/latest?definitionId=1&branchName=master)
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
