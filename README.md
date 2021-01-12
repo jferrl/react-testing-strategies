@@ -1,6 +1,7 @@
 # React Testing strategies
 
 ![react-testing-strategies CI](https://github.com/jferrl/react-testing-strategies/workflows/react-testing-strategies%20CI/badge.svg)
+[![codecov](https://codecov.io/gh/jferrl/react-testing-strategies/branch/master/graph/badge.svg?token=NNKwNluuyS)](https://codecov.io/gh/jferrl/react-testing-strategies)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
