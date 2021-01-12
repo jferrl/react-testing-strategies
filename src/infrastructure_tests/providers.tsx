@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl';
 
 export const appendIntlProvider = (component: ReactElement, messages?: Record<string, string>, locale: string = 'en'): ReactElement => {
     return (
-        <IntlProvider locale={locale} messages={messages} onError={jest.fn()}>
+        <IntlProvider locale={locale} messages={messages}>
             {component}
         </IntlProvider>
     );
