@@ -2,7 +2,7 @@
 
 exports[`Storyshots Components/NavBar Default 1`] = `
 <nav
-  className="navbar navbar-expand navbar-dark bg-primary"
+  className="navbar navbar-expand navbar-light bg-light"
   data-testid="mars-rover-photos-navbar"
 >
   <a
@@ -10,6 +10,14 @@ exports[`Storyshots Components/NavBar Default 1`] = `
     data-testid="mars-rover-photos-navbar-brand"
     href="#"
   >
+    <img
+      alt="nasa logo"
+      className="d-inline-block align-top"
+      data-testid="mars-rover-photos-nasa-logo"
+      height="30"
+      src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
+      width="30"
+    />
     Mars Rover Photos
   </a>
 </nav>
