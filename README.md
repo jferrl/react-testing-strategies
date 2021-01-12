@@ -46,7 +46,40 @@ if you want to use this project as a playground, you just have to pull locally a
 
 ### Test Pyramid
 
+Related Posts:
+
+* [Martin Fowler - TestPyramid](https://martinfowler.com/bliki/TestPyramid.html)
+* [Kent C. Dodds - Static vs Unit vs Integration vs E2E Testing for Frontend Apps](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests)
+* [Kent C. Dodds - Write tests. Not too many. Mostly integration](https://kentcdodds.com/blog/write-tests)
+* [Mike Wacker - Just Say No to More End-to-End Tests](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
+
 ![TestPyramid](https://kentcdodds.com/static/c56de32357ab41ab66d6feb2dfaec567/00d43/testing-trophy.png)
+
+### Static testing
+
+Catch typos and type errors as you write the code.
+
+* Use of TypeScript ([TypeScript](https://www.typescriptlang.org/))
+  
+* Linter (TsLint, ESLint) (pd: tslint is going to be deprecated, but I like it a lot and I don't want to stop using it :sob:)
+  
+* Configure your proyect with a good set of linting rules [Linting rules](https://github.com/jferrl/react-testing-strategies/blob/master/tslint.json)
+
+#### Create React + TypeScript proyect
+
+[Create React App - Adding TypeScript](https://create-react-app.dev/docs/adding-typescript/)
+
+```sh
+    npx create-react-app my-app --template typescript
+```
+
+or
+
+```sh
+    yarn create react-app my-app --template typescript
+```
+
+### Unit + Integration testing
 
 ## Available Scripts
 
