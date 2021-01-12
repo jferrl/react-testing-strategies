@@ -3,9 +3,54 @@
 ![react-testing-strategies CI](https://github.com/jferrl/react-testing-strategies/workflows/react-testing-strategies%20CI/badge.svg)
 [![codecov](https://codecov.io/gh/jferrl/react-testing-strategies/branch/master/graph/badge.svg?token=NNKwNluuyS)](https://codecov.io/gh/jferrl/react-testing-strategies)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About The Proyect
+
+This project has the intention of being a practical guide on how to make an effective testing in a React.js application, covering the testing of the different casuistics from the unit point of view to E2E.
+
+### Built With
+
+* [React](https://reactjs.org/)
+* [Redux](https://react-redux.js.org/)
+* [Jest](https://jestjs.io/)
+* [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+* [Cypress](https://www.cypress.io/)
+* [Storybook](https://storybook.js.org/)
+* [Chromatic](https://www.chromatic.com/)
+* [Bootstrap](https://getbootstrap.com)
+
+## Getting Started
+
+if you want to use this project as a playground, you just have to pull locally and start playing.
+
+### Installation
+
+1. Clone the repo
+
+    ```sh
+    git clone https://github.com/jferrl/react-testing-strategies.git
+    ```
+
+2. Install NPM packages
+
+    ```sh
+    npm install
+    ```
+
+3. Run
+
+    ```sh
+    npm run start
+    ```
+
+## How to test a React.js app
+
+### Test Pyramid
+
+![TestPyramid](https://kentcdodds.com/static/c56de32357ab41ab66d6feb2dfaec567/00d43/testing-trophy.png)
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
@@ -47,3 +92,21 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Contributing
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Your Name - [@jferrl](https://twitter.com/jferrl) - jorgeferrerolinacero@gmail.com
+
+Project Link: [https://github.com/jferrl/react-testing-strategies](https://github.com/jferrl/react-testing-strategies)
