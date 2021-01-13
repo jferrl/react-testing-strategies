@@ -13,8 +13,6 @@ export const appendIntlProvider = (children: React.ReactElement, i18n?: Record<s
     );
 };
 
-export const appendReduxStoreProvider = (children: React.ReactElement): React.ReactElement => <Provider store={store}>{children}</Provider>;
-
 export const appendRealProviders = (children: React.ReactElement): React.ReactElement => {
     return (
         <IntlProvider locale={locale} messages={messages[locale]}>
