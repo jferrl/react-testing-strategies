@@ -4,14 +4,14 @@ import * as types from './types';
 
 export default function marsPhotosReducer(state: types.State = types.defaultState, action: types.Action): types.State {
     switch (action.type) {
-        case types.LOAD_ALL_MARS_PHOTOS: {
+        case types.LOAD_MARS_PHOTOS: {
             return {
                 ...state,
                 loading: true,
                 error: null
             };
         }
-        case types.LOAD_ALL_MARS_PHOTOS_SUCCESS: {
+        case types.LOAD_MARS_PHOTOS_SUCCESS: {
             return {
                 ...state,
                 loading: false,
@@ -20,7 +20,7 @@ export default function marsPhotosReducer(state: types.State = types.defaultStat
                 photos: action.photos
             };
         }
-        case types.LOAD_ALL_MARS_PHOTOS_FAILED: {
+        case types.LOAD_MARS_PHOTOS_FAILED: {
             return {
                 ...state,
                 loading: false,
