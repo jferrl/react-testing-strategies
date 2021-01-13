@@ -13,8 +13,12 @@ export default class NavBarObject {
         return this.navbar();
     }
 
-    navbarTitle(): string | null {
+    title(): string | null {
         return this.brand().textContent;
+    }
+
+    logo(): HTMLElement {
+        return this.rendered.getByTestId('mars-rover-photos-nasa-logo');
     }
 
     private brand(): HTMLElement {

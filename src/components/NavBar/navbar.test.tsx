@@ -19,6 +19,11 @@ describe('NavBar', (): void => {
 
     it('should render navbar brand', (): void => {
         const navbar = new NavBarObject(aNavBar(), messages);
-        expect(navbar.navbarTitle()).toBe(fakeTitle);
+        expect(navbar.title()).toBe(fakeTitle);
+    });
+
+    it('should render nasa logo', (): void => {
+        const navbar = new NavBarObject(aNavBar(), messages);
+        expect(navbar.logo()).toBeTruthy();
     });
 });
