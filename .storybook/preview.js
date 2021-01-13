@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { addDecorator } from '@storybook/react';
 import { setIntlConfig, withIntl } from 'storybook-addon-intl';
 
-import en_messages from '../src/translations/en.json';
-import es_messages from '../src/translations/es.json';
+import en_messages from '../src/i18n/en.json';
+import es_messages from '../src/i18n/es.json';
 
 const messages = {
     en: en_messages,
