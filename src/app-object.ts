@@ -13,6 +13,22 @@ export default class AppObject {
         return this.app();
     }
 
+    navbar(): HTMLElement {
+        return this.rendered.getByTestId('mars-rover-photos-navbar');
+    }
+
+    gallery(): HTMLElement {
+        return this.rendered.getByTestId('mars-rover-photos-gallery');
+    }
+
+    spinner(): HTMLElement | null {
+        return this.rendered.queryByTestId('mars-rover-photos-gallery-loading');
+    }
+
+    photos(): HTMLElement | null {
+        return this.rendered.queryByTestId('mars-rover-photos');
+    }
+
     private app(): HTMLElement {
         return this.rendered.getByTestId('mars-rover-photos-app');
     }

@@ -1,4 +1,4 @@
-import { GlobalWithFetchMock } from 'jest-fetch-mock';
+import fetchMock, { disableFetchMocks, enableFetchMocks } from 'jest-fetch-mock';
 import createMockStore, { MockStoreEnhanced } from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
@@ -8,24 +8,27 @@ import { defaultState, LOAD_MARS_PHOTOS, LOAD_MARS_PHOTOS_FAILED, LOAD_MARS_PHOT
 const middlewares = [thunk];
 const mockStore = createMockStore(middlewares);
 
-const customGlobal: GlobalWithFetchMock = global as any;
-// tslint:disable-next-line: no-var-requires
-customGlobal.fetch = require('jest-fetch-mock');
-customGlobal.fetchMock = customGlobal.fetch;
-
 describe('store', (): void => {
     const buildStore = (): MockStoreEnhanced<unknown> => mockStore({ marsPhotosStore: defaultState });
     const fakePhotos = [{ id: 40 }];
     const date = '2020-01-05';
 
+    beforeAll((): void => {
+        enableFetchMocks();
+    });
+
+    afterAll((): void => {
+        disableFetchMocks();
+    });
+
     beforeEach((): void => {
-        customGlobal.fetchMock.resetMocks();
+        fetchMock.resetMocks();
     });
 
     it('load all mars photos', async (): Promise<void> => {
         const photos: any = { photos: fakePhotos };
 
-        customGlobal.fetch.mockResponse(JSON.stringify(photos));
+        fetchMock.mockResponse(JSON.stringify(photos));
 
         const expectedActions = [
             { type: LOAD_MARS_PHOTOS },
@@ -43,7 +46,7 @@ describe('store', (): void => {
 
     it('load all mars photos throw an error', async (): Promise<void> => {
         const errorMessage = 'fake_error';
-        customGlobal.fetch.mockReject(new Error(errorMessage));
+        fetchMock.mockReject(new Error(errorMessage));
 
         const expectedActions = [
             { type: LOAD_MARS_PHOTOS },

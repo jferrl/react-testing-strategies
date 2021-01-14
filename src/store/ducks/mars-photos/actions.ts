@@ -9,7 +9,7 @@ export const loadMarsPhotos = (date: string): AppThunk => {
         dispatch({ type: types.LOAD_MARS_PHOTOS });
 
         try {
-            const photos: Photo[] = (await (await fetchMarsPhotos(date)).json()).photos;
+            const photos: Photo[] = (await (await fetchMarsPhotos(date)).json()).photos || [];
 
             dispatch({ type: types.LOAD_MARS_PHOTOS_SUCCESS, photos });
         } catch (error) {
