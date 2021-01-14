@@ -81,7 +81,8 @@ or
 
 ### Unit + Integration testing
 
-Verify that individual, isolated parts work as expected.
+Unit: Verify that individual, isolated parts work as expected.
+Integration: Verify that several units work together in harmony.
 
 #### Shallow rendering vs full rendering
 
