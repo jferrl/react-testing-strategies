@@ -51,6 +51,7 @@ Related Posts:
 * [Martin Fowler - TestPyramid](https://martinfowler.com/bliki/TestPyramid.html)
 * [Kent C. Dodds - Static vs Unit vs Integration vs E2E Testing for Frontend Apps](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests)
 * [Kent C. Dodds - Write tests. Not too many. Mostly integration](https://kentcdodds.com/blog/write-tests)
+* [Kent C. Dodds - Common Testing Mistakes](https://kentcdodds.com/blog/common-testing-mistakes)
 * [Mike Wacker - Just Say No to More End-to-End Tests](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
 
 ![TestPyramid](https://kentcdodds.com/static/c56de32357ab41ab66d6feb2dfaec567/00d43/testing-trophy.png)
@@ -81,8 +82,13 @@ or
 
 ### Unit + Integration testing
 
-Unit: Verify that individual, isolated parts work as expected.
-Integration: Verify that several units work together in harmony.
+* Unit: Verify that individual, isolated parts work as expected.
+* Integration: Verify that several units work together in harmony.
+
+> The line between integration and unit tests is a bit fuzzy.
+> You can do to write more integration tests if you stop mocking so much stuff.
+> When you mock something you’re removing all confidence in the integration between what you’re testing and what’s being mocked. (Shallow rendering)
+> Kent C. Dodds <https://kentcdodds.com/blog/write-tests>
 
 Most used testing libraries:
 
@@ -90,6 +96,13 @@ Most used testing libraries:
 * [Enzyme](https://enzymejs.github.io/enzyme/)
 
 *Projects created with Create React App have out of the box support for React Testing Library*.
+
+In this sense, a component / application can be tested in different ways:
+
+* Structure: We test how the component is composed, in this case, verify that the component renders as expected
+* Behavior: For example, if a component is clickable, we must test that if one action (click, hover, etc) has been triggered, the associated reaction has been called (call a function, render other component, etc ).
+* Snapshot: A snapshot of a component verifies that with the same component input parameters, the dom that is generated when rendering is always the same. In this case, we make sure that what a browser shows will always be the same.
+* Visual: The look and feel of the component is as expected/defined UX department
 
 #### Shallow rendering vs full rendering
 
@@ -105,7 +118,7 @@ Related Posts:
 *Why developers use shallow rendering ?*
 
 1) For calling methods in React components
-   * This is a great reason to use shallow rendering, but it's a bad testing practice testing our react application.
+   * This is a great reason to use shallow rendering, but it's a bad practice for testing react application.
 2) It seems like a waste to render all of the children of each component under test, for every test.
 3) For actual unit testing. Testing composed components introduces new dependencies that might trigger an error while the unit itself might still work as intended.
 
