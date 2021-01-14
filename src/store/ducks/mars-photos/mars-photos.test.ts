@@ -44,6 +44,23 @@ describe('store', (): void => {
         expect(store.getActions()).toEqual(expectedActions);
     });
 
+    it('load empty list when response is not defined', async (): Promise<void> => {
+        fetchMock.mockResponse(JSON.stringify(fakePhotos));
+
+        const expectedActions = [
+            { type: LOAD_MARS_PHOTOS },
+            {
+                photos: [],
+                type: LOAD_MARS_PHOTOS_SUCCESS
+            }
+        ];
+
+        const store = buildStore();
+
+        await store.dispatch(loadMarsPhotos(date) as any);
+        expect(store.getActions()).toEqual(expectedActions);
+    });
+
     it('load all mars photos throw an error', async (): Promise<void> => {
         const errorMessage = 'fake_error';
         fetchMock.mockReject(new Error(errorMessage));
