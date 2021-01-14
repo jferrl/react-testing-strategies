@@ -84,6 +84,13 @@ or
 Unit: Verify that individual, isolated parts work as expected.
 Integration: Verify that several units work together in harmony.
 
+Most used testing libraries:
+
+* [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+* [Enzyme](https://enzymejs.github.io/enzyme/)
+
+*Projects created with Create React App have out of the box support for React Testing Library*.
+
 #### Shallow rendering vs full rendering
 
 > The more your tests resemble the way your software is used, the more confidence they can give you.
@@ -93,6 +100,7 @@ Integration: Verify that several units work together in harmony.
 Related Posts:
 
 * [Kent C. Dodds - Why I Never Use Shallow Rendering](https://kentcdodds.com/blog/why-i-never-use-shallow-rendering)
+* [Kent C. Dodds - Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details)
 
 *Why developers use shallow rendering ?*
 
@@ -101,6 +109,11 @@ Related Posts:
 2) It seems like a waste to render all of the children of each component under test, for every test.
 3) For actual unit testing. Testing composed components introduces new dependencies that might trigger an error while the unit itself might still work as intended.
 
+*Why is testing implementation details bad?*
+
+1) Can break when you refactor application code. False negatives
+2) May not fail when you break application code. False positives
+
 #### Page Object Pattern
 
 A page object wraps an HTML page, or fragment, with an application-specific API, allowing you to manipulate page elements without digging around in the HTML.
@@ -108,6 +121,8 @@ A page object wraps an HTML page, or fragment, with an application-specific API,
 ![PageObject](https://martinfowler.com/bliki/images/pageObject/pageObject.png)
 
 * [Martin Fowler - PageObject](https://martinfowler.com/bliki/PageObject.html)
+
+### Visual regresion testing (Storybook + Chromatic)
 
 ### E2E testing
 
