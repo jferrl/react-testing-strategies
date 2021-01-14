@@ -97,12 +97,12 @@ Most used testing libraries:
 
 *Projects created with Create React App have out of the box support for React Testing Library*.
 
-In this sense, a component / application can be tested in different ways:
+A component can be tested in different ways:
 
 * **Structure**: We test how the component is composed, in this case, verify that the component renders as expected
 * **Behavior**: For example, if a component is clickable, we must test that if one action (click, hover, etc) has been triggered, the associated reaction has been called (call a function, render other component, etc ).
 * **Snapshot**: A snapshot of a component verifies that with the same component input parameters, the dom that is generated when rendering is always the same. In this case, we make sure that what a browser shows will always be the same.
-* **Visual**: The look and feel of the component is as expected/defined UX department
+* **Visual**: The look and feel of the component is as expected/defined by UX department
 
 #### Shallow rendering vs full rendering
 
