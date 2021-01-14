@@ -87,7 +87,8 @@ Integration: Verify that several units work together in harmony.
 #### Shallow rendering vs full rendering
 
 > The more your tests resemble the way your software is used, the more confidence they can give you.
-> - Kent C. Dodds - https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests
+>
+> Kent C. Dodds - <https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests>
 
 Related Posts:
 
