@@ -2,9 +2,9 @@ import fetchMock, { disableFetchMocks, enableFetchMocks } from 'jest-fetch-mock'
 import React from 'react';
 
 import AppObject from './app-object';
+import { flushPromises } from './infrastructure_tests/promises';
 import { photos } from './testdata/photos';
 import App from './App';
-import { flushPromises } from './infrastructure_tests/promises';
 
 describe('App', (): void => {
     const anApp = (): React.ReactElement => <App />;
