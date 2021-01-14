@@ -141,10 +141,19 @@ Page objects are commonly used for testing, but should not make assertions thems
 
 Storybook is a development tool that helps you build components in isolation and record their states as stories. Stories make it easy to explore a component in all its permutations no matter how complex. They also serve as excellent visual test cases.
 
-* Code review for UI
-* Automated testing with CI
+On the other hand, Chromatic is a cloud service for Storybook that aims to bring significant improvements to UI development and testing workflow.
+
+* Shared Storybook instance for teams
+* Documentation
+* Visual regression testing
+* CI support
+
+[Storybook and Chromatic tutorial](https://www.chromatic.com/docs/storybook)
 
 ### E2E testing
+
+[Cypress docs](https://docs.cypress.io/guides/getting-started/installing-cypress.html#System-requirements)
+[Cypress example recipes](https://github.com/cypress-io/cypress-example-recipes)
 
 ## Available Scripts
 
