@@ -130,6 +130,7 @@ Related Posts:
 #### Page Object Pattern
 
 A page object wraps an HTML page, or fragment, with an application-specific API, allowing you to manipulate page elements without digging around in the HTML.
+The basic rule of thumb for a page object is that it should allow a software client to do anything and see anything that a human can.
 
 ![PageObject](https://martinfowler.com/bliki/images/pageObject/pageObject.png)
 
