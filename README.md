@@ -103,6 +103,12 @@ Related Posts:
 
 #### Page Object Pattern
 
+A page object wraps an HTML page, or fragment, with an application-specific API, allowing you to manipulate page elements without digging around in the HTML.
+
+![PageObject](https://martinfowler.com/bliki/images/pageObject/pageObject.png)
+
+* [Martin Fowler - PageObject](https://martinfowler.com/bliki/PageObject.html)
+
 ### E2E testing
 
 ## Available Scripts
