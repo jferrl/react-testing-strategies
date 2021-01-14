@@ -11,13 +11,11 @@ import store from './store';
 import App from './App';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <IntlProvider locale={locale} messages={messages[locale]}>
-            <Provider store={store}>
-                <App />
-            </Provider>
-        </IntlProvider>
-    </React.StrictMode>,
+    <IntlProvider locale={locale} messages={messages[locale]}>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </IntlProvider>,
     document.getElementById('root')
 );
 
