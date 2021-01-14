@@ -81,6 +81,26 @@ or
 
 ### Unit + Integration testing
 
+Verify that individual, isolated parts work as expected.
+
+#### Shallow rendering vs full rendering
+
+> The more your tests resemble the way your software is used, the more confidence they can give you.
+> - Kent C. Dodds - https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests
+
+Related Posts:
+
+* [Kent C. Dodds - Why I Never Use Shallow Rendering](https://kentcdodds.com/blog/why-i-never-use-shallow-rendering)
+
+*Why developers use shallow rendering ?*
+
+1) For calling methods in React components
+   * This is a great reason to use shallow rendering, but it's a bad testing practice testing our react application.
+2) It seems like a waste to render all of the children of each component under test, for every test.
+3) For actual unit testing. Testing composed components introduces new dependencies that might trigger an error while the unit itself might still work as intended.
+
+#### Page Object Pattern
+
 ### E2E testing
 
 ## Available Scripts
