@@ -4,16 +4,16 @@ import { AppThunk } from '../index';
 
 import * as types from './types';
 
-export const loadAllMarsPhotos = (): AppThunk => {
+export const loadMarsPhotos = (date: string): AppThunk => {
     return async (dispatch: types.Dispatch): Promise<void> => {
-        dispatch({ type: types.LOAD_ALL_MARS_PHOTOS });
+        dispatch({ type: types.LOAD_MARS_PHOTOS });
 
         try {
-            const photos: Photo[] = (await (await fetchMarsPhotos()).json()).photos;
+            const photos: Photo[] = (await (await fetchMarsPhotos(date)).json()).photos || [];
 
-            dispatch({ type: types.LOAD_ALL_MARS_PHOTOS_SUCCESS, photos });
+            dispatch({ type: types.LOAD_MARS_PHOTOS_SUCCESS, photos });
         } catch (error) {
-            dispatch({ type: types.LOAD_ALL_MARS_PHOTOS_FAILED, error: error.message });
+            dispatch({ type: types.LOAD_MARS_PHOTOS_FAILED, error: error.message });
         }
     };
 };

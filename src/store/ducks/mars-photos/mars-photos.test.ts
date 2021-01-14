@@ -1,60 +1,81 @@
-import { GlobalWithFetchMock } from 'jest-fetch-mock';
+import fetchMock, { disableFetchMocks, enableFetchMocks } from 'jest-fetch-mock';
 import createMockStore, { MockStoreEnhanced } from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
-import { loadAllMarsPhotos } from './actions';
-import { defaultState, LOAD_ALL_MARS_PHOTOS, LOAD_ALL_MARS_PHOTOS_FAILED, LOAD_ALL_MARS_PHOTOS_SUCCESS } from './types';
+import { loadMarsPhotos } from './actions';
+import { defaultState, LOAD_MARS_PHOTOS, LOAD_MARS_PHOTOS_FAILED, LOAD_MARS_PHOTOS_SUCCESS } from './types';
 
 const middlewares = [thunk];
 const mockStore = createMockStore(middlewares);
 
-const customGlobal: GlobalWithFetchMock = global as any;
-// tslint:disable-next-line: no-var-requires
-customGlobal.fetch = require('jest-fetch-mock');
-customGlobal.fetchMock = customGlobal.fetch;
-
 describe('store', (): void => {
     const buildStore = (): MockStoreEnhanced<unknown> => mockStore({ marsPhotosStore: defaultState });
     const fakePhotos = [{ id: 40 }];
+    const date = '2020-01-05';
+
+    beforeAll((): void => {
+        enableFetchMocks();
+    });
+
+    afterAll((): void => {
+        disableFetchMocks();
+    });
 
     beforeEach((): void => {
-        customGlobal.fetchMock.resetMocks();
+        fetchMock.resetMocks();
     });
 
     it('load all mars photos', async (): Promise<void> => {
         const photos: any = { photos: fakePhotos };
 
-        customGlobal.fetch.mockResponse(JSON.stringify(photos));
+        fetchMock.mockResponse(JSON.stringify(photos));
 
         const expectedActions = [
-            { type: LOAD_ALL_MARS_PHOTOS },
+            { type: LOAD_MARS_PHOTOS },
             {
                 photos: fakePhotos,
-                type: LOAD_ALL_MARS_PHOTOS_SUCCESS
+                type: LOAD_MARS_PHOTOS_SUCCESS
             }
         ];
 
         const store = buildStore();
 
-        await store.dispatch(loadAllMarsPhotos() as any);
+        await store.dispatch(loadMarsPhotos(date) as any);
+        expect(store.getActions()).toEqual(expectedActions);
+    });
+
+    it('load empty list when response is not defined', async (): Promise<void> => {
+        fetchMock.mockResponse(JSON.stringify(fakePhotos));
+
+        const expectedActions = [
+            { type: LOAD_MARS_PHOTOS },
+            {
+                photos: [],
+                type: LOAD_MARS_PHOTOS_SUCCESS
+            }
+        ];
+
+        const store = buildStore();
+
+        await store.dispatch(loadMarsPhotos(date) as any);
         expect(store.getActions()).toEqual(expectedActions);
     });
 
     it('load all mars photos throw an error', async (): Promise<void> => {
         const errorMessage = 'fake_error';
-        customGlobal.fetch.mockReject(new Error(errorMessage));
+        fetchMock.mockReject(new Error(errorMessage));
 
         const expectedActions = [
-            { type: LOAD_ALL_MARS_PHOTOS },
+            { type: LOAD_MARS_PHOTOS },
             {
                 error: errorMessage,
-                type: LOAD_ALL_MARS_PHOTOS_FAILED
+                type: LOAD_MARS_PHOTOS_FAILED
             }
         ];
 
         const store = buildStore();
 
-        await store.dispatch(loadAllMarsPhotos() as any);
+        await store.dispatch(loadMarsPhotos(date) as any);
         expect(store.getActions()).toEqual(expectedActions);
     });
 });
