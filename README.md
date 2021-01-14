@@ -101,7 +101,7 @@ A component can be tested in different ways:
 
 * **Structure**: We test how the component is composed, in this case, verify that the component renders as expected
 * **Behavior**: For example, if a component is clickable, we must test that if one action (click, hover, etc) has been triggered, the associated reaction has been called (call a function, render other component, etc ).
-* **Snapshot**: A snapshot of a component verifies that with the same component input parameters, the dom that is generated when rendering is always the same. In this case, we make sure that what a browser shows will always be the same.
+* **Snapshot**: A snapshot of a component verifies that with the same component input parameters, the dom that is generated when rendering is always the same. In this case, we make sure that what a browser shows will always be the same. Snapshot tests compare the rendered markup of every story against known baselines. This catches markup changes that cause rendering errors and warnings.
 * **Visual**: The look and feel of the component is as expected/defined by UX department
 
 #### Shallow rendering vs full rendering
@@ -138,6 +138,11 @@ Page objects are commonly used for testing, but should not make assertions thems
 * [Martin Fowler - PageObject](https://martinfowler.com/bliki/PageObject.html)
 
 ### Visual regresion testing (Storybook + Chromatic)
+
+Storybook is a development tool that helps you build components in isolation and record their states as stories. Stories make it easy to explore a component in all its permutations no matter how complex. They also serve as excellent visual test cases.
+
+* Code review for UI
+* Automated testing with CI
 
 ### E2E testing
 
