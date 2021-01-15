@@ -9,4 +9,7 @@ export default {
     title: 'Components/InputDate'
 } as Meta;
 
-export const Default: Story = (): React.ReactElement => <InputDate onInput={jest.fn()} />;
+// tslint:disable-next-line: no-empty
+const mock = (): void => {};
+
+export const Default: Story = (): React.ReactElement => <InputDate onInput={mock} />;
