@@ -2150,6 +2150,18 @@ exports[`Storyshots Components/Gallery Loading 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/InputDate Default 1`] = `
+<div
+  data-testid="mars-rover-date-input"
+>
+  <input
+    data-testid="mars-rover-date-input-element"
+    onChange={[Function]}
+    type="text"
+  />
+</div>
+`;
+
 exports[`Storyshots Components/NavBar Default 1`] = `
 <nav
   className="navbar navbar-expand navbar-light bg-light fixed-top"
