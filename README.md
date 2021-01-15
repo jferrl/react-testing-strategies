@@ -97,8 +97,6 @@ Most used testing libraries:
 > When you mock something you’re removing all confidence in the integration between what you’re testing and what’s being mocked. (Shallow rendering)
 > Kent C. Dodds <https://kentcdodds.com/blog/write-tests>
 
-
-
 A component can be tested in different ways:
 
 * **Structure**: We test how the component is composed, in this case, verify that the component renders as expected
