@@ -85,17 +85,19 @@ or
 * Unit: Verify that individual, isolated parts work as expected.
 * Integration: Verify that several units work together in harmony.
 
-> The line between integration and unit tests is a bit fuzzy.
-> You can do to write more integration tests if you stop mocking so much stuff.
-> When you mock something you’re removing all confidence in the integration between what you’re testing and what’s being mocked. (Shallow rendering)
-> Kent C. Dodds <https://kentcdodds.com/blog/write-tests>
-
 Most used testing libraries:
 
 * [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 * [Enzyme](https://enzymejs.github.io/enzyme/)
 
 *Projects created with Create React App have out of the box support for React Testing Library*.
+
+> The line between integration and unit tests is a bit fuzzy.
+> You can do to write more integration tests if you stop mocking so much stuff.
+> When you mock something you’re removing all confidence in the integration between what you’re testing and what’s being mocked. (Shallow rendering)
+> Kent C. Dodds <https://kentcdodds.com/blog/write-tests>
+
+
 
 A component can be tested in different ways:
 
