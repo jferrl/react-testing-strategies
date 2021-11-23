@@ -54,7 +54,7 @@ Related Posts:
 * [Kent C. Dodds - Common Testing Mistakes](https://kentcdodds.com/blog/common-testing-mistakes)
 * [Mike Wacker - Just Say No to More End-to-End Tests](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
 
-![TestPyramid](https://kentcdodds.com/static/c56de32357ab41ab66d6feb2dfaec567/00d43/testing-trophy.png)
+![TestPyramid](https://res.cloudinary.com/kentcdodds-com/image/upload/w_1100,q_auto,f_auto,b_rgb:e6e9ee/kentcdodds.com/content/blog/unit-vs-integration-vs-e2e-tests/banner)
 
 ### Static testing
 
